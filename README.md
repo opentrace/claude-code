@@ -14,35 +14,22 @@ A Claude Code plugin that provides system architecture exploration and incident 
 
 ### Prerequisites
 
-1. An OpenTrace account with API access
+1. An OpenTrace account
 2. Claude Code CLI installed
 
 ### Setup
 
-1. **Get your API token**:
-   - Go to [https://app.opentrace.ai/settings/api-tokens](https://app.opentrace.ai/settings/api-tokens)
-   - Click "Create API Token"
-   - Copy the token
-
-2. **Set the environment variable**:
-   ```bash
-   export OPENTRACE_TOKEN="your-token-here"
-   ```
-
-   Or add to your shell profile (`~/.bashrc`, `~/.zshrc`, etc.):
-   ```bash
-   echo 'export OPENTRACE_TOKEN="your-token-here"' >> ~/.bashrc
-   ```
-
-3. **Add the plugin marketplace** (one-time setup):
+1. **Add the plugin marketplace** (one-time setup):
    ```bash
    /plugin marketplace add opentrace/insight-claude-plugin
    ```
 
-4. **Install the plugin**:
+2. **Install the plugin**:
    ```bash
    /plugin install opentrace
    ```
+
+3. **Authenticate**: On first use, you'll be prompted to sign in via your browser using OAuth2.
 
 ## Available Tools
 
@@ -146,14 +133,9 @@ Use impact_analysis to assess what would be affected if I change the billing-api
 
 If you see authentication errors:
 
-1. Check that `OPENTRACE_TOKEN` is set:
-   ```bash
-   echo $OPENTRACE_TOKEN
-   ```
-
-2. Verify the token is valid (not expired)
-
-3. Ensure the token has correct permissions for your organization
+1. Try re-authenticating by using any OpenTrace tool - you'll be prompted to sign in again
+2. Ensure you're signing in with an account that has access to your organization
+3. Check that your browser allows popups for the OAuth2 flow
 
 ### Connection Issues
 

@@ -2,9 +2,6 @@
   "opentrace": {
     "type": "http",
     "url": "https://api.opentrace.ai/mcp/v1",
-    "headers": {
-      "Authorization": "Bearer ${OPENTRACE_TOKEN}"
-    },
     "description": "OpenTrace knowledge graph and investigation tools"
   }
 }
