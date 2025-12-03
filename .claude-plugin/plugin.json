@@ -1,6 +1,5 @@
 {
   "name": "opentrace",
-  "displayName": "OpenTrace",
   "version": "1.0.0",
   "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph",
   "author": {
@@ -16,5 +15,5 @@
     "knowledge-graph",
     "mcp"
   ],
-  "mcpServers": ["opentrace"]
+  "mcpServers": ["./mcp-servers/opentrace.json"]
 }
