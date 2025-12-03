@@ -34,7 +34,12 @@ A Claude Code plugin that provides system architecture exploration and incident 
    echo 'export OPENTRACE_TOKEN="your-token-here"' >> ~/.bashrc
    ```
 
-3. **Install the plugin**:
+3. **Add the plugin marketplace** (one-time setup):
+   ```bash
+   /plugin marketplace add opentrace/insight-claude-plugin
+   ```
+
+4. **Install the plugin**:
    ```bash
    /plugin install opentrace
    ```
