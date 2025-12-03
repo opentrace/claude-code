@@ -3,7 +3,9 @@
   "displayName": "OpenTrace",
   "version": "1.0.0",
   "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph",
-  "author": "OpenTrace Team",
+  "author": {
+    "name": "OpenTrace Team"
+  },
   "license": "MIT",
   "homepage": "https://opentrace.ai",
   "repository": "https://github.com/opentrace/insight-claude-plugin",
