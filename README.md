@@ -39,14 +39,6 @@ Use diagnose_service_outage - the checkout service is returning 500 errors
 Search for all services in the knowledge graph
 ```
 
-## Troubleshooting
-
-**Authentication errors**: Try using any OpenTrace tool again to re-authenticate via browser.
-
-**Connection issues**: Check your internet connection and verify the API is available at `https://api.opentrace.ai/health`.
-
-**Permission errors**: Verify your organization membership and role permissions.
-
 ## Links
 
 - [OpenTrace Documentation](https://docs.opentrace.ai)
