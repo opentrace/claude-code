@@ -1,0 +1,19 @@
+{
+  "name": "opentrace",
+  "version": "0.0.1",
+  "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph",
+  "author": {
+    "name": "OpenTrace Team"
+  },
+  "license": "MIT",
+  "homepage": "https://opentrace.ai",
+  "repository": "https://github.com/opentrace/insight-claude-plugin",
+  "keywords": [
+    "architecture",
+    "observability",
+    "incident-response",
+    "knowledge-graph",
+    "mcp"
+  ],
+  "mcpServers": ["./mcp-servers/opentrace.json"]
+}

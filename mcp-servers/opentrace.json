@@ -1,0 +1,7 @@
+{
+  "opentrace": {
+    "type": "http",
+    "url": "https://api.opentrace.ai/mcp/v1",
+    "description": "OpenTrace knowledge graph and investigation tools"
+  }
+}

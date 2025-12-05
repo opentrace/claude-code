@@ -1,0 +1,13 @@
+{
+  "name": "opentrace-marketplace",
+  "owner": {
+    "name": "OpenTrace"
+  },
+  "plugins": [
+    {
+      "name": "opentrace",
+      "source": "./",
+      "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph"
+    }
+  ]
+}
