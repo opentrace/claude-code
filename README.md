@@ -13,7 +13,7 @@ A Claude Code plugin that connects to OpenTrace's MCP server, providing access t
 
 1. **Add the plugin marketplace**:
    ```
-   /plugin marketplace add opentrace/insight-claude-plugin
+   /plugin marketplace add opentrace/claude-code
    ```
 
 2. **Install the plugin**:
