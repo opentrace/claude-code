@@ -12,30 +12,15 @@ prompt=$(echo "$input_json" | jq -r '.prompt // ""' 2>/dev/null)
 # Convert to lowercase for matching
 prompt_lower=$(echo "$prompt" | tr '[:upper:]' '[:lower:]')
 
-# Keywords that suggest architecture/dependency exploration
+# Core keywords for architecture/dependency exploration
 ARCHITECTURE_KEYWORDS=(
     "architecture"
     "dependenc"
-    "depend.* on"
-    "what.*call"
-    "who.*call"
-    "what.*use"
-    "who.*use"
-    "downstream"
     "upstream"
-    "service.*diagram"
-    "system.*overview"
-    "how does.*connect"
-    "how does.*work"
-    "trace.*error"
-    "trace.*request"
-    "impact.*change"
-    "what would break"
-    "blast radius"
+    "downstream"
+    "impact"
     "outage"
     "incident"
-    "500 error"
-    "failing"
     "root cause"
 )
 
@@ -52,7 +37,7 @@ done
 if [ "$matches_architecture" = true ]; then
     cat << 'EOF'
 {
-  "additionalContext": "<user-prompt-submit-hook>\nOpenTrace MCP is connected. Consider using:\n- `discover_architecture` - explore system structure\n- `dependency_analysis` - map upstream/downstream dependencies\n- `impact_analysis` - assess change impact\n- `search_nodes` / `query_nodes` - find components in knowledge graph\n- `traverse_dependencies` - trace service relationships\n</user-prompt-submit-hook>"
+  "additionalContext": "<user-prompt-submit-hook>\nOpenTrace MCP may help with this query. Consider using:\n- `search_nodes` / `query_nodes` - find components in knowledge graph\n- `traverse_dependencies` - trace service relationships\n- `get_neighbors` - explore immediate connections\n</user-prompt-submit-hook>"
 }
 EOF
 else
