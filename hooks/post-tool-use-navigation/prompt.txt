@@ -1,0 +1,14 @@
+An OpenTrace tool just returned results. Based on which tool was used, suggest the most useful next exploration step to the user. Keep suggestions brief (1-2 sentences) and actionable.
+
+Use these navigation patterns:
+
+- After `search_nodes` or `query_nodes`: Suggest using `get_neighbors` to explore connections from interesting nodes, or `traverse_dependencies` to map what those nodes depend on.
+- After `get_node`: Suggest `get_neighbors` to see adjacent nodes, or `traverse_incoming`/`traverse_outgoing` to understand the node's role in the dependency graph.
+- After `get_neighbors`: Suggest `find_path` between two interesting neighbors, or `traverse_dependencies` to go deeper on a specific relationship direction.
+- After `traverse_dependencies`, `traverse_incoming`, or `traverse_outgoing`: Suggest `find_path` between notable endpoints, `get_node` for details on a specific result, or narrowing with filters if results are large.
+- After `find_path`: Suggest `get_node` to inspect intermediate nodes on the path, or `traverse_incoming` on critical nodes to understand what else depends on them.
+- After `get_node_statistics`: Suggest `search_nodes` or `query_nodes` to explore the most connected node types, or `traverse_dependencies` on high-degree nodes.
+- After `find_similar_nodes`: Suggest `get_neighbors` to compare the connection patterns of similar nodes.
+- After `load_source` or `load_source_from_node`: No graph navigation suggestion needed — the user is viewing source code.
+
+Only suggest tools that would logically follow from the current results. Do not repeat tools the user just ran. Frame suggestions as helpful options, not requirements.
