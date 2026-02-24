@@ -1,6 +1,6 @@
 {
   "name": "opentrace",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph",
   "author": {
     "name": "OpenTrace Team"
