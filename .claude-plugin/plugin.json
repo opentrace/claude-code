@@ -1,6 +1,6 @@
 {
   "name": "opentrace",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "System architecture exploration and incident investigation using OpenTrace's knowledge graph",
   "author": {
     "name": "OpenTrace Team"
@@ -24,6 +24,37 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-start/script.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*(?i)opentrace.*(traverse_dependencies|traverse_incoming|traverse_outgoing|get_neighbors)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-tool-use-traversal/script.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-tool-use-edit-blast-radius/prompt.txt"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+    {
+        "matcher": "mcp__.*(?i)opentrace.*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "${CLAUDE_PLUGIN_ROOT}/hooks/post-tool-use-navigation/prompt.txt"
           }
         ]
       }

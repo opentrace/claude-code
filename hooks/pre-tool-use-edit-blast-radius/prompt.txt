@@ -1,0 +1,5 @@
+Check the file_path in this Edit tool call. If the file appears to be in a critical integration, infrastructure, or shared middleware path based on its location (e.g. directories named integrations, middleware, connectors, adapters, clients, providers, gateway, or similar), AND is NOT a test file or mock, then respond with:
+
+"This file appears to be in a shared integration or infrastructure path. Consider querying OpenTrace (search_nodes, get_neighbors, traverse_dependencies) to understand the blast radius — which services depend on this component and what downstream effects this change may have."
+
+Otherwise, respond with an empty string.
