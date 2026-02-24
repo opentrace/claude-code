@@ -2,7 +2,7 @@ PLUGIN_NAME := opentrace
 MARKETPLACE := opentrace-marketplace
 SCOPE := user
 
-.PHONY: install uninstall reinstall validate list marketplace-add marketplace-remove marketplace-reinstall dev
+.PHONY: install uninstall reinstall validate list marketplace-add marketplace-remove marketplace-reinstall dev spellcheck
 
 ## Install the plugin from the marketplace
 install:
@@ -33,3 +33,7 @@ dev: uninstall marketplace-reinstall install
 ## List installed plugins
 list:
 	claude plugin list
+
+## Run spell check
+spellcheck:
+	npx cspell --config cspell.json "**/*.{md,txt,sh,json}"

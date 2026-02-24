@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    ".claude/",
+    ".git/",
+    ".idea/",
+    "node_modules/",
+    "*.log"
+  ],
+  "words": [
+    "opentrace",
+    "codebase",
+    "submodule",
+    "submodules",
+    "guardrail",
+    "guardrails",
+    "hookSpecificOutput",
+    "hookEventName",
+    "additionalContext",
+    "systemMessage",
+    "maxDepth",
+    "edgeTypes",
+    "nodeTypes",
+    "edgeFilter",
+    "nodeFilter",
+    "mcpServers",
+    "pipefail",
+    "CURDIR",
+    "jq",
+    "gitignored",
+    "uninstall",
+    "reinstall",
+    "tooluse",
+    "PreToolUse",
+    "PostToolUse",
+    "SessionStart"
+  ]
+}
