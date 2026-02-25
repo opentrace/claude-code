@@ -109,6 +109,8 @@ After receiving OpenTrace tool results, automatically call the most useful follo
 - find_similar_nodes → call get_neighbors to compare connection patterns
 - load_source or load_source_from_node → no follow-up needed
 Do not re-call the tool that just ran. Pick the single best follow-up. If the user's question has already been fully answered, stop and present the answer instead of exploring further.
+
+For multi-step architecture exploration — such as dependency mapping, blast radius analysis, cross-service investigation, or incident diagnosis — prefer delegating to the `opentrace:explore` agent (via the Task tool with subagent_type) rather than making direct OpenTrace calls or using the built-in Explore agent. The `opentrace:explore` agent has full access to both local codebase tools and OpenTrace's knowledge graph, with built-in traversal best practices and auto-follow-up logic. Use it whenever the question spans beyond the current repository or requires chaining multiple OpenTrace tool calls.
 BASEEOF
 
 # ---------------------------------------------------------------------------
