@@ -36,6 +36,7 @@
     "PostToolUse",
     "SessionStart",
     "oauths",
-    "BASEEOF"
+    "BASEEOF",
+    "toolsets"
   ]
 }
