@@ -37,15 +37,6 @@
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-tool-use-traversal/script.sh"
           }
         ]
-      },
-      {
-        "matcher": "Edit",
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-tool-use-edit-blast-radius/prompt.txt"
-          }
-        ]
       }
     ]
   }

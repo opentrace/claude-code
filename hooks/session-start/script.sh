@@ -99,6 +99,8 @@ Proactively query OpenTrace (search_nodes, get_neighbors, traverse_dependencies)
 - Asks about dependencies, impact, blast radius, or upstream/downstream effects
 - Involves editing code that integrates with external services or shared middleware
 
+When about to edit files in shared integration or infrastructure paths (e.g. directories named integrations, middleware, connectors, adapters, clients, providers, gateway, or similar) that are NOT test files or mocks, consider querying OpenTrace (search_nodes, get_neighbors, traverse_dependencies) first to understand the blast radius — which services depend on this component and what downstream effects the change may have.
+
 After receiving OpenTrace tool results, automatically call the most useful follow-up tool to deepen the exploration rather than stopping to ask the user what to do next. Choose the follow-up based on which tool just ran:
 - search_nodes or query_nodes → call get_neighbors on the most relevant node
 - get_node → call get_neighbors or traverse_incoming/traverse_outgoing to understand the node's role
