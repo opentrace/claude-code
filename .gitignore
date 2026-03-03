@@ -8,8 +8,8 @@
 .DS_Store
 Thumbs.db
 
-# Local settings
-.claude/settings.local.json
+# Local settings (clone opentrace/.claude here for shared agents/commands)
+.claude/
 
 # Environment files
 .env

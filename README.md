@@ -62,7 +62,6 @@ Identifies all dependent components and highlights critical paths.
 | **Discovery** | `search_nodes`, `query_nodes`, `get_node`, `find_similar_nodes` |
 | **Traversal** | `traverse_dependencies`, `traverse_incoming`, `traverse_outgoing`, `get_neighbors` |
 | **Analysis** | `find_path`, `get_node_statistics` |
-| **Investigations** | `list_investigations`, `get_investigation` |
 | **Source** | `load_source` (GitHub/GitLab integration) |
 
 **Analysis Prompts**: `discover_architecture`, `impact_analysis`, `dependency_analysis`
