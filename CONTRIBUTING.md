@@ -2,14 +2,9 @@
 
 ## Local Development Setup
 
-1. **Clone the repository** (with submodules):
+1. **Clone the repository**:
    ```bash
-   git clone --recurse-submodules git@github.com:opentrace/claude-code.git
-   ```
-
-   If you already cloned without submodules:
-   ```bash
-   git submodule update --init --recursive
+   git clone git@github.com:opentrace/claude-code.git
    ```
 
 2. **Add the local repository as a marketplace**:
@@ -34,7 +29,6 @@ claude plugin install opentrace
 ## Project Structure
 
 ```
-.claude/             # Shared Claude Code settings (git submodule)
 hooks/
   session-start      # Hook that runs when a Claude Code session starts
 mcp-servers/
@@ -47,7 +41,7 @@ CONTRIBUTING.md
 
 - **Hooks** live in `hooks/`. Changes are picked up on the next Claude Code session.
 - **MCP server config** lives in `mcp-servers/opentrace.json`. Restart Claude Code after changes.
-- **Shared settings** are in the `.claude` submodule. If you need to modify shared settings, submit changes to the [.claude repository](https://github.com/opentrace/.claude) separately.
+- **Shared settings** (optional): OpenTrace developers can clone [opentrace/.claude](https://github.com/opentrace/.claude) into `.claude/` for shared agents and commands. This directory is gitignored.
 
 ## Submitting Changes
 

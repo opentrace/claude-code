@@ -8,18 +8,12 @@ This is the **OpenTrace Claude Code Plugin** — a Claude Code plugin that conne
 
 ## Architecture
 
-The repository has two layers:
-
-1. **Plugin layer** (this repo) — Contains the plugin manifest, MCP server configuration, and plugin-specific hooks. This is what gets installed via `claude plugin install`.
-2. **Shared `.claude` submodule** — A git submodule (`opentrace/.claude`) containing shared agents, commands, hooks, and settings used across OpenTrace projects. Changes to shared settings must be submitted to the [.claude repository](https://github.com/opentrace/.claude) separately.
-
 ### Key Files
 
 - `.claude-plugin/plugin.json` — Plugin manifest: name, version, MCP server references, and hook definitions
 - `.claude-plugin/marketplace.json` — Marketplace metadata for plugin discovery
 - `mcp-servers/opentrace.json` — MCP server configuration pointing to `https://api.opentrace.ai/mcp/v1`
 - `hooks/` — Plugin hooks (see below)
-- `.claude/` — Git submodule with shared agents, commands, and settings (do not edit directly in this repo)
 
 ### Plugin Hooks
 
@@ -57,13 +51,11 @@ The standard development cycle is: edit files → `make dev` → restart Claude 
 ### First-Time Setup
 
 ```bash
-git clone --recurse-submodules git@github.com:opentrace/claude-code.git
+git clone git@github.com:opentrace/claude-code.git
 cd claude-code
 make marketplace-add
 make install
 ```
-
-If cloned without submodules: `git submodule update --init --recursive`
 
 ### Testing Changes
 
